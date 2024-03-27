@@ -39,7 +39,17 @@ export default class LinkedList{
             }
         return size;
 
-    } 
+    }
+
+    getHead(){
+        const headNode = this.head;
+        return headNode;
+    }
+
+    getTail(){
+        const tailNode = this.tail;
+        return tailNode;
+    }
     
 }
 
