@@ -1,6 +1,23 @@
-// // src/dom.js
+// src/dom.js
 
-import { TodoApp } from './todo';
+// This file is for manipulating the DOM
+
+import LinkedList from './linkedlist';
+
+
+const newLinkedList = new LinkedList();
+
+
+
+
+
+
+
+
+
+
+// OLD code examples for inspiration
+/*
 
 // Instantiate your TodoApp - if I should want to manipulate the todo app here..
 const myTodoApp = new TodoApp();

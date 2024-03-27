@@ -1,7 +1,30 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable max-classes-per-file */
-// src/todo.js
+// src/linkedlist.js
 
+import { Node } from "./node";
+
+
+
+export default class LinkedList{
+    constructor(){
+        this.head = null;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Old code examples for inspiration
+
+/*
 
 class Todo {
     constructor(description){
@@ -70,4 +93,4 @@ export class TodoApp{
 
 
 
-   
+*/   
