@@ -7,9 +7,12 @@ import LinkedList from './linkedlist';
 
 const newLinkedList = new LinkedList();
 
-newLinkedList.append("hello");
-newLinkedList.append("hello 2");
-newLinkedList.append("hello 3");
+
+newLinkedList.prepend("hello 3");
+newLinkedList.prepend("hello 3");
+
+console.log(newLinkedList.size());
+
 
 
 
