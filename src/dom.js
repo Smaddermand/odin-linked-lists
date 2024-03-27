@@ -17,6 +17,8 @@ console.log(newLinkedList.size());
 console.log(newLinkedList.getHead());
 console.log(newLinkedList.getTail());
 
+console.log(newLinkedList.at(6));
+
 // console.log(newLinkedList.head());
 // console.log(newLinkedList.tail());
 

@@ -34,7 +34,7 @@ export default class LinkedList{
         let size = 0;
         let currentNode = this.head;
         while(currentNode !== null){
-            size += 1;
+            size ++;
             currentNode = currentNode.nextNode;
             }
         return size;
@@ -49,6 +49,18 @@ export default class LinkedList{
     getTail(){
         const tailNode = this.tail;
         return tailNode;
+    }
+
+    // at(index) returns the node at the given index
+
+    at(index){
+        let currentIndex = 0;
+        let currentNode = this.head;
+        while(currentIndex < index && currentNode !== null){
+            currentNode = currentNode.nextNode;
+            currentIndex++;
+        }
+        return currentNode;
     }
     
 }
