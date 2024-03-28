@@ -62,7 +62,75 @@ export default class LinkedList{
         }
         return currentNode;
     }
+
+    // pop removes the last element from the list
+    pop() {
+        if (this.head === null) {
+            console.log("Empty list");
+            return; // Early return for an empty list
+        }
+        if (this.head.nextNode === null) {
+            // List has only one node
+            this.head = null; // Now the list is empty
+            this.tail = null;
+            return;
+        }
+        let currentNode = this.head;
+        let previousNode = null;
+        while (currentNode.nextNode !== null) {
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+        }
+        // At this point, currentNode is the last node, and previousNode is the second-to-last
+        if (previousNode !== null) {
+            previousNode.nextNode = null; // Remove the last node by setting nextNode of the new tail to null
+            this.tail = previousNode;
+        }
+    }
     
+    // contains(value) returns true if the passed in value is in the list and otherwise returns false.
+
+    contains(value) {
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            if (currentNode.value === value) {
+                return true;
+            }
+            currentNode = currentNode.nextNode;
+        }
+        return false;
+    }
+
+    // find(value) returns the index of the node containing value, or null if not found.
+
+    find(value) {
+        let currentIndex = 0;
+        let currentNode = this.head;
+            while(currentNode !== null){
+                if(currentNode.value === value){
+                    return currentIndex;
+                }
+                currentNode = currentNode.nextNode;
+                currentIndex++;
+            }   
+        return null;    
+    }   
+
+    // toString represents your LinkedList objects as strings, 
+    // so you can print them out and preview them in the console. 
+    // The format should be: ( value ) -> ( value ) -> ( value ) -> null
+
+    toString(){
+        let currentNode = this.head;
+        let string = "";
+            while(currentNode !== null) {
+                string += `( ${currentNode.value} ) -> `;
+                currentNode = currentNode.nextNode;
+            }
+        string += "null";
+        return string;    
+    }
+
 }
 
 
